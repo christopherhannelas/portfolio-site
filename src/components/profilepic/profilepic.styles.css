@@ -1,0 +1,112 @@
+.container-p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 1rem 4rem 1rem;
+  cursor: pointer;
+}
+.borderprofile {
+  height: 95%;
+  width: 90%;
+  margin: 5%;
+  background: transparent;
+  border-radius: 20px;
+  transition: border 1s;
+  position: relative;
+}
+.borderprofile:hover {
+  border: 1px solid #fff;
+}
+.card {
+  height: 500px;
+  width: 500px;
+  border-radius: 20px;
+  transition: background 0.8s;
+  overflow: hidden;
+  box-shadow: 0 70px 63px -60px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card0 {
+  background: url('../../assets/profile-pic.png') center bottom no-repeat;
+  background-size: 500px;
+}
+.card0:hover {
+  background: url('../../assets/profile-pic.png') left top no-repeat;
+  background-size: 700px;
+}
+
+.icons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.social {
+  width: 2rem;
+  margin-left: 1rem;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  opacity: 0.2;
+  transition: all 1s;
+}
+
+.card0:hover .social {
+  opacity: 1;
+  width: 4rem;
+}
+.profiletitle {
+  font-weight: bolder;
+  font-size: larger;
+  text-align: start;
+  color: #000;
+  margin: 1rem;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.card0:hover .profiletitle {
+  opacity: 1;
+}
+
+/***** Responsivity *****/
+@media only screen and (max-width: 495px) {
+  .card {
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
+    transition: background 0.8s;
+    overflow: hidden;
+    box-shadow: 0 70px 63px -60px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .card0 {
+    background: url('../../assets/profile-pic.jpg') center center no-repeat;
+    background-size: 350px;
+  }
+  .card0:hover {
+    background: url('../../assets/profile-pic.jpg') left bottom no-repeat;
+    background-size: 450px;
+  }
+  .borderprofile {
+    height: 95%;
+    width: 90%;
+    margin: 5%;
+    background: transparent;
+    border-radius: 20px;
+    transition: border 1s;
+    position: relative;
+  }
+  .borderprofile:hover {
+    border: 1px solid #fff;
+  }
+  .card0:hover .social {
+    opacity: 1;
+    width: 3rem;
+  }
+}

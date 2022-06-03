@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './logo.styles.css';
 
 const SvgComponent = (props) => (

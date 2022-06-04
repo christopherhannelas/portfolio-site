@@ -2,14 +2,14 @@ svg {
   height: 100vh;
   width: 100vw;
   fill-opacity: 0;
-  animation: fadeOpacity 2s forwards 2s;
+  animation: fadeOpacity 2s forwards 4s;
   fill: #fff;
 }
 
 svg path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  animation: draw 2s forwards;
+  animation: draw 3s forwards 1s;
 }
 
 @keyframes draw {

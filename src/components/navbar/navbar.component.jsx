@@ -1,13 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.styles.css';
 
 function Navbar(props) {
   const page = props;
-
-  //to delete :
-  // console.log(page.contact);
-  // console.log(page.home);
 
   return (
     <nav className=''>
@@ -17,10 +13,11 @@ function Navbar(props) {
             <Link to='/'>Home</Link>
           </li>
         )}
-        <li>
-          <a href='#'>About</a>
-        </li>
-
+        {!page.about && (
+          <li>
+            <Link to='/about'>About</Link>
+          </li>
+        )}
         <li>
           <a href='#'>Services</a>
         </li>

@@ -6,9 +6,7 @@ import Profilepic from '../profilepic/profilepic.component';
 const HomeContent = () => {
   return (
     <div className=' blurred-box'>
-      <div className=' profilepic-box'>
-        <Profilepic />
-      </div>
+      <Profilepic />
 
       <div className=''>
         <p>

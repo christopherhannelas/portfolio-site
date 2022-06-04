@@ -1,13 +1,13 @@
 import React from 'react';
-
 import { motion } from 'framer-motion';
 import Navbar from '../../components/navbar/navbar.component';
 import Background from '../../components/background/background.component';
+import Profilepic from '../../components/profilepic/profilepic.component';
 
-function Contact() {
+function About() {
   const home = false;
-  const contact = true;
-  const about = false;
+  const contact = false;
+  const about = true;
 
   return (
     <motion.div
@@ -17,9 +17,11 @@ function Contact() {
       transition={{ duration: 1 }}
     >
       <Background />
+
       <Navbar home={home} contact={contact} about={about} />
+      <Profilepic />
     </motion.div>
   );
 }
 
-export default Contact;
+export default About;

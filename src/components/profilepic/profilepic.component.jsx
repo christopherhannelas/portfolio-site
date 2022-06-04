@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import facebook from '../../assets/facebook.png';
 import twitter from '../../assets/twitter.png';
 import github from '../../assets/github.png';
@@ -6,9 +7,27 @@ import linkedin from '../../assets/linkedin.png';
 
 import './profilepic.styles.css';
 
+const profilePicAnimate = {
+  offscreen: { x: 100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 2,
+    },
+  },
+};
 const Profilepic = () => {
   return (
-    <div className='container-p'>
+    <motion.div
+      className='container-p'
+      initial={'offscreen'}
+      whileInView={'onscreen'}
+      viewport={{ once: false, amount: 0.5 }}
+      variants={profilePicAnimate}
+    >
       <div className=' card card0'>
         <div className='borderprofile'>
           <div className='profiletitle'> Christopher</div>
@@ -44,7 +63,7 @@ const Profilepic = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

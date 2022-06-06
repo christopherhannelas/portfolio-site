@@ -1,4 +1,5 @@
 nav {
+  font-family: 'EB Garamond', serif;
   position: relative;
   max-width: 60rem;
   mask-image: linear-gradient(
@@ -9,7 +10,6 @@ nav {
     rgba(255, 255, 255, 0) 100%
   );
   margin: 0 auto;
-  padding: 1rem 0;
 }
 
 nav ul {
@@ -32,9 +32,9 @@ nav ul li {
 nav ul li a {
   padding: 1rem;
   font-family: inherit;
-  text-transform: uppercase;
-  color: #2f8f9d;
-  font-size: 1rem;
+
+  color: white;
+  font-size: 1.5rem;
   text-decoration: none;
   display: block;
 }
@@ -46,8 +46,6 @@ nav ul li a:hover {
   color: #00587a;
 }
 
-@media only screen and (max-width: 750px) {
-  #homeNavBtn {
-    display: none;
-  }
+.navLogo {
+  height: 1.5rem;
 }

@@ -1,11 +1,8 @@
 import React from 'react';
-import Profilepic from '../profilepic/profilepic.component';
 
-function AboutContent() {
+function ContactContent() {
   return (
     <div className=' blurred-box'>
-      <Profilepic />
-
       <div className=''>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -72,4 +69,4 @@ function AboutContent() {
   );
 }
 
-export default AboutContent;
+export default ContactContent;

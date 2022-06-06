@@ -1,21 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.styles.css';
+import logowhite from '../../assets/logo.png';
 
 function Navbar() {
   return (
     <nav className=''>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <Link to='/mycode'>myCode</Link>
         </li>
 
         <li>
-          <Link to='/about'>About</Link>
-        </li>
-
-        <li>
-          <Link to='/about'>service</Link>
+          <Link to='/'>
+            <img className='navLogo' src={logowhite}></img>
+          </Link>
         </li>
 
         <li>

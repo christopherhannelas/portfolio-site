@@ -14,7 +14,7 @@ const profilePicAnimate = {
     opacity: 1,
     transition: {
       type: 'spring',
-      bounce: 0.4,
+      bounce: 0.6,
       duration: 2,
     },
   },
@@ -25,7 +25,7 @@ const Profilepic = () => {
       className='container-p'
       initial={'offscreen'}
       whileInView={'onscreen'}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.4 }}
       variants={profilePicAnimate}
     >
       <div className=' card card0'>

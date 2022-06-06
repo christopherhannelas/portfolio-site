@@ -1,9 +1,8 @@
 import React from 'react';
-
 import { motion } from 'framer-motion';
-import ContactContent from '../components/contact-content/contact-content-component';
+import CodeContent from '../components/code-content/code-content.component';
 
-function Contact() {
+function MyCode() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -11,9 +10,9 @@ function Contact() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <ContactContent />
+      <CodeContent />
     </motion.div>
   );
 }
 
-export default Contact;
+export default MyCode;

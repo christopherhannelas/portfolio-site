@@ -12,6 +12,7 @@ const App = () => {
     <div className='App'>
       <LogoComponent />
       <Background />
+
       <Router>
         <AnimatedRoutes />
       </Router>

@@ -1,4 +1,5 @@
 .container-p {
+  font-family: 'Parisienne', cursive;
   display: flex;
   justify-content: space-around;
   align-items: center;

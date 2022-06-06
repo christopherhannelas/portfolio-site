@@ -1,10 +1,7 @@
 import React from 'react';
-import './home-content.styles.css';
-
 import Profilepic from '../profilepic/profilepic.component';
-import Footer from '../footer/footer.component';
 
-const HomeContent = () => {
+function AboutContent() {
   return (
     <div className=' blurred-box'>
       <Profilepic />
@@ -73,6 +70,6 @@ const HomeContent = () => {
       </div>
     </div>
   );
-};
+}
 
-export default HomeContent;
+export default AboutContent;

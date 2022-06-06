@@ -2,7 +2,7 @@ import './background.styles.css';
 
 const Background = () => {
   return (
-    <div className='backgroundlines'>
+    <div id='backgroundlines'>
       <div className='lines'>
         <div className='line'></div>
         <div className='line'></div>

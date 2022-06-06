@@ -2,30 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.styles.css';
 
-function Navbar(props) {
-  const page = props;
-
+function Navbar() {
   return (
     <nav className=''>
       <ul>
-        {!page.home && (
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-        )}
-        {!page.about && (
-          <li>
-            <Link to='/about'>About</Link>
-          </li>
-        )}
         <li>
-          <a href='#'>Services</a>
+          <Link to='/'>Home</Link>
         </li>
-        {!page.contact && (
-          <li>
-            <Link to='/contact'>Contact</Link>
-          </li>
-        )}
+
+        <li>
+          <Link to='/about'>About</Link>
+        </li>
+
+        <li>
+          <Link to='/about'>service</Link>
+        </li>
+
+        <li>
+          <Link to='/contact'>Contact</Link>
+        </li>
       </ul>
     </nav>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './logo.styles.css';
 
-const SvgComponent = (props) => (
+const LogoComponent = (props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 2834.65 2834.65'
@@ -30,4 +30,4 @@ const SvgComponent = (props) => (
   </svg>
 );
 
-export default SvgComponent;
+export default LogoComponent;

@@ -1,10 +1,8 @@
 import React from 'react';
-import Navbar from '../../components/navbar/navbar.component';
-import Background from '../../components/background/background.component';
+import Navbar from '../components/navbar/navbar.component';
 
-import SvgComponent from '../../components/logo/logo.component';
-import HomeContent from '../../components/home-content/home-content.component';
-
+import HomeContent from '../components/home-content/home-content.component';
+import Footer from '../components/footer/footer.component';
 import { motion } from 'framer-motion';
 
 function Home() {
@@ -17,10 +15,9 @@ function Home() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <Background />
-      <SvgComponent />
       <Navbar home={home} contact={contact} />
       <HomeContent />
+      <Footer />
     </motion.div>
   );
 }

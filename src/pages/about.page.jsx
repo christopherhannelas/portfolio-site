@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '../../components/navbar/navbar.component';
-import Background from '../../components/background/background.component';
-import Profilepic from '../../components/profilepic/profilepic.component';
+import Navbar from '../components/navbar/navbar.component';
+import Background from '../components/background/background.component';
+import Profilepic from '../components/profilepic/profilepic.component';
 
 function About() {
   const home = false;

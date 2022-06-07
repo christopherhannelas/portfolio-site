@@ -1,0 +1,37 @@
+.ulist,
+.listedItem {
+  list-style: none;
+  margin: auto auto auto auto;
+  padding: 0;
+}
+
+.ulist {
+  width: auto;
+  height: auto;
+  display: flexbox;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.4);
+
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.listedItem {
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.listedItem:last-child {
+  margin-bottom: 0;
+}
+
+.row {
+  width: 100%;
+  height: 8px;
+  background-color: #999;
+  border-radius: 10px;
+  margin-top: 12px;
+}

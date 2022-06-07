@@ -1,7 +1,37 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  /* This is better for small screens, once min() is better supported */
+  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+  gap: 1rem;
+}
 .hometitle {
   display: inline;
   width: 350px;
 }
 .reactLogo {
   width: 2rem;
+  animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.logoBox {
+  background-color: darkslategray;
+  width: fit-content;
+  padding: 10px 10px 2px 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: cadetblue;
+  margin-left: auto;
+  margin-right: auto;
+}
+.candosubTitle {
+  color: white;
+}
+.slider {
+  height: 20rem;
+  width: auto;
 }

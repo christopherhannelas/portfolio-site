@@ -8,13 +8,13 @@ import linkedin from '../../assets/linkedin.png';
 import './profilepic.styles.css';
 
 const profilePicAnimate = {
-  offscreen: { x: 100, opacity: 0 },
+  offscreen: { y: 50, opacity: 0 },
   onscreen: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       type: 'spring',
-      bounce: 0.6,
+      bounce: 0.8,
       duration: 2,
     },
   },
@@ -25,7 +25,7 @@ const Profilepic = () => {
       className='container-p'
       initial={'offscreen'}
       whileInView={'onscreen'}
-      viewport={{ once: false, amount: 0.4 }}
+      viewport={{ once: false, amount: 0.2 }}
       variants={profilePicAnimate}
     >
       <div className=' card card0'>

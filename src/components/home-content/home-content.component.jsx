@@ -2,6 +2,7 @@ import React from 'react';
 import './home-content.styles.css';
 import { motion } from 'framer-motion';
 import Profilepic from '../profilepic/profilepic.component';
+import Projectshop from '../project-shop/project-shop.component';
 import logoReact from '../../assets/logoreact.png';
 
 const HomeContent = () => {
@@ -63,11 +64,10 @@ const HomeContent = () => {
         <div className='logoBox'>
           <img className='reactLogo' src={logoReact} alt='react-Logo'></img>
         </div>
-        <span className='miniText'>
-          by the way, you are currently scrolling a React app{' '}
-        </span>
-      </div>
-      <div className='skillsContainer'>
+        {/* <span className='miniText'>
+          by the way, you are currently scrolling a React app.
+        </span> */}
+
         <motion.div
           initial={'hidden'}
           whileInView={'visible'}
@@ -87,7 +87,7 @@ const HomeContent = () => {
           devices using the latest technologies available.
         </p>
       </div>
-      <div className='project1'>
+      <div className='project'>
         <motion.div
           initial={'hidden'}
           whileInView={'visible'}
@@ -96,6 +96,7 @@ const HomeContent = () => {
         >
           <h1 className='projectTitle'>Projects.</h1>
         </motion.div>
+        <Projectshop />
       </div>
     </div>
   );

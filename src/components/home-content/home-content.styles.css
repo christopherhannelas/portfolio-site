@@ -2,13 +2,11 @@
   /*Grid*/
   width: 100%;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 40% 30% 30%;
 
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    'profilePic about '
-    'profilePic skills '
-    'project1 project1 ';
+  grid-template-rows: 1fr;
+  grid-template-areas: 'profilePic about project ';
+
   grid-gap: 1rem;
 
   /*blurred box background*/
@@ -37,25 +35,19 @@
   padding: 2rem;
 }
 
-.skillsContainer {
-  grid-area: skills;
+.project {
+  grid-area: project;
   padding: 2rem;
 }
 
-.project1 {
-  grid-area: project1;
-  padding: 2rem;
-}
-
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1050px) {
   .homeContentGrid {
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
       'profilePic'
       'about'
-      'skills'
-      'project1';
+      'project';
   }
   .hometitle {
     width: 200px;

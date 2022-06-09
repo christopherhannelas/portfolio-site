@@ -1,20 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import './footer.component.css';
 
-function Footer() {
+function Footer(props) {
+  const { titleAnimation } = props;
   return (
-    <div className='blurred-box'>
-      <h1>I can help!</h1>
-      <h2>I'm currently available for freelance work...</h2>
-      <h6>
+    <div className='footerBox'>
+      <motion.div
+        initial={'hidden'}
+        whileInView={'visible'}
+        viewport={{ once: false, amount: 0.2 }}
+        variants={titleAnimation}
+      >
+        <h1 className='aboutMeTitle'>I can help.</h1>
+      </motion.div>
+      <h3 className='footerSubTitle'>
+        &gt;I'm currently available for freelance work...
+      </h3>
+
+      <p className='subtext'>
         If you have a project that you want to get started, think you need my
-        help with something or just fancy saying hey, then get in touch.
-      </h6>
-      <div>
-        <Link to='/contact'>
-          <button>Contact me</button>
-        </Link>
-      </div>
+        help with something, then get in touch.
+      </p>
+
+      <Link to='/contact'>
+        <button>Contact me</button>
+      </Link>
     </div>
   );
 }

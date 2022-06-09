@@ -2,24 +2,11 @@ import React from 'react';
 import './home-content.styles.css';
 import { motion } from 'framer-motion';
 import Profilepic from '../profilepic/profilepic.component';
-import Projectshop from '../project-shop/project-shop.component';
+import Project from '../project/project.component';
 import logoReact from '../../assets/logoreact.png';
 
-const HomeContent = () => {
-  const titleAnimation = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        bounce: 0.8,
-
-        duration: 0.8,
-      },
-    },
-  };
+const HomeContent = (props) => {
+  const { titleAnimation } = props;
 
   return (
     <div className=' homeContentGrid'>
@@ -96,7 +83,7 @@ const HomeContent = () => {
         >
           <h1 className='projectTitle'>Projects.</h1>
         </motion.div>
-        <Projectshop />
+        <Project />
       </div>
     </div>
   );

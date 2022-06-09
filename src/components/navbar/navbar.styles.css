@@ -9,7 +9,7 @@ nav {
     #ffffff 75%,
     rgba(255, 255, 255, 0) 100%
   );
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
 }
 
 nav ul {

@@ -9,7 +9,7 @@
     0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin: 2rem 1rem 2rem 1rem;
 }
 
 .tabBar {
@@ -85,8 +85,36 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
+.addLogoProject {
+  display: flex;
+  max-width: 50%;
+  margin: 1rem auto 5px auto;
+}
+.tabTitle {
+  margin: 1rem auto 5px auto;
+  display: inline-block;
+  color: darkslategrey;
+}
+@counter-style descriptionList {
+  system: fixed;
+  symbols: '\1F4A1''\1F680''\1F4E1';
+  suffix: ' ';
+}
+.descUl {
+  list-style: descriptionList;
+}
 .description {
   display: flex;
   max-width: 100%;
-  margin: 15px;
+  margin: 5px;
+  text-align: left;
+  font-size: small;
+}
+.features {
+  list-style: circle outside;
+  list-style-position: outside;
+}
+.linkLogo {
+  height: 3rem;
+  margin: 0 1rem 1rem 1rem;
 }

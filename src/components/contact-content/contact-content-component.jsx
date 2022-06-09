@@ -1,8 +1,9 @@
 import React from 'react';
+import './contact-content-styles.css';
 
 function ContactContent() {
   return (
-    <div className=' blurred-box'>
+    <div className=' ContactBox'>
       <div className=''>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

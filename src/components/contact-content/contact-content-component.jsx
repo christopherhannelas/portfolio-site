@@ -22,10 +22,10 @@ function ContactContent(props) {
         <h1 className='contactTitle'>Contact me.</h1>
       </motion.div>
       <h3 className='contactSubTitle'>&gt;Grab my contact details:</h3>
+      <div className='instruction'>
+        <p>✨ Feel free to get in touch (or just touch 👇 ! ) </p>
+      </div>
       <motion.div className='contactContainer' ref={constraintsRef}>
-        <div className='instruction'>
-          <p>✨ Feel free to drag and drop 👇 </p>
-        </div>
         <motion.div
           className='item mailBox'
           drag
@@ -69,8 +69,7 @@ function ContactContent(props) {
           drag
           dragConstraints={constraintsRef}
         >
-          <img className='contactIcon' src={whatsapp} alt='Mail icon'></img>☎
-          +230 57830438
+          <img src={whatsapp} alt='Mail icon'></img>📱 +230 57830438
         </motion.div>
       </motion.div>
 

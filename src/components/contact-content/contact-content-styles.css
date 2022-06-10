@@ -28,20 +28,18 @@
 
 .contactContainer {
   width: auto;
-  height: 60rem;
+  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* place-content: center;
-  place-items: center; */
 
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 30px;
 
   margin: 2rem auto 2rem auto;
 }
 .instruction {
-  position: absolute;
+  margin: auto;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -55,7 +53,7 @@
   flex-direction: column;
   border-radius: 10px;
   margin: auto;
-  padding: 2rem;
+
   cursor: grab;
 }
 
@@ -65,27 +63,58 @@
 .facebookBox {
   background: rgba(255, 255, 255, 0.6);
   border: solid;
-  border-color: darkblue;
+  border-color: rgba(0, 0, 139, 0.6);
+  padding: 2rem;
 }
 .mailBox {
   background: rgba(255, 255, 255, 0.6);
   border: solid;
-  border-color: orange;
+  border-color: rgba(255, 165, 0, 0.6);
+  padding: 2rem;
 }
 .linkedinbox {
   background: rgba(255, 255, 255, 0.6);
   border: solid;
-  border-color: rgb(0, 118, 253);
+  border-color: rgba(0, 118, 253, 0.6);
+  padding: 2rem;
 }
 .phoneBox {
   background: rgba(255, 255, 255, 0.6);
   border: solid;
-  border-color: rgb(46, 177, 74);
+  border-color: rgba(46, 177, 74, 0.6);
+  padding: 2rem;
 }
 .contactIcon {
   width: 3rem;
   margin: 10px;
+  transition: linear 0.2s;
 }
+.contactIcon:hover {
+  width: 4rem;
+  transition: linear 0.2s;
+}
+.phoneBox img {
+  width: 3rem;
+  margin: 10px;
+}
+
 .subtext {
   font-size: medium;
+}
+
+@media only screen and (max-width: 750px) {
+  .contactContainer {
+    width: auto;
+    height: 60rem;
+    display: flex;
+
+    justify-content: center;
+  }
+  .mailBox {
+    background: rgba(255, 255, 255, 0.6);
+    border: solid;
+    border-color: orange;
+    padding: 8px;
+    font-size: clamp(15px, 5px, 1rem);
+  }
 }

@@ -102,8 +102,9 @@ function Project() {
                   <u>Concept</u>:
                 </h4>
               </li>
-              <p>{selectedTab ? selectedTab.concept : '😋'}</p>
-
+              <div className='descDiv'>
+                <p>{selectedTab ? selectedTab.concept : '😋'}</p>
+              </div>
               <li>
                 <h4>
                   <u>Features</u>:

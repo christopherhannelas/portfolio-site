@@ -13,7 +13,7 @@ function Footer(props) {
         viewport={{ once: false, amount: 0.2 }}
         variants={titleAnimation}
       >
-        <h1 className='aboutMeTitle'>I can help.</h1>
+        <h1 className='footerTitle'>I can help.</h1>
       </motion.div>
       <h3 className='footerSubTitle'>
         &gt;I'm currently available for freelance work...

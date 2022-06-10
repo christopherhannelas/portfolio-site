@@ -1,69 +1,87 @@
 import React from 'react';
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import linkedin from '../../assets/linkedin.png';
+import facebook from '../../assets/facebook.png';
+import mailLogo from '../../assets/envelope.png';
+import phoneLogo from '../../assets/telephone.png';
+import whatsapp from '../../assets/whatsapp.png';
 import './contact-content-styles.css';
 
-function ContactContent() {
+function ContactContent(props) {
+  const { contactTitleAnimation } = props;
+  const constraintsRef = useRef(null);
   return (
-    <div className=' ContactBox'>
-      <div className=''>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Pellentesque id nibh tortor id. Tellus pellentesque eu tincidunt
-          tortor aliquam nulla facilisi cras. Quam viverra orci sagittis eu
-          volutpat odio facilisis mauris sit. Aliquam etiam erat velit
-          scelerisque. Lorem ipsum dolor sit amet consectetur adipiscing elit
-          ut. Tempus urna et pharetra pharetra massa massa ultricies. Elementum
-          curabitur vitae nunc sed velit. Tellus in hac habitasse platea. Est
-          pellentesque elit ullamcorper dignissim. Varius quam quisque id diam
-          vel quam. In fermentum et sollicitudin ac orci phasellus egestas
-          tellus rutrum. Eget magna fermentum iaculis eu. Quis commodo odio
-          aenean sed. Nibh mauris cursus mattis molestie a iaculis. Gravida
-          neque convallis a cras semper auctor neque vitae tempus. Tincidunt
-          nunc pulvinar sapien et ligula. Ullamcorper eget nulla facilisi etiam
-          dignissim diam quis enim lobortis. Non quam lacus suspendisse faucibus
-          interdum posuere. Nunc scelerisque viverra mauris in aliquam sem.
-        </p>
-      </div>
+    <div className=' contactBox'>
+      <motion.div
+        initial={'hidden'}
+        whileInView={'visible'}
+        viewport={{ once: false, amount: 0.2 }}
+        variants={contactTitleAnimation}
+      >
+        <h1 className='contactTitle'>Contact me.</h1>
+      </motion.div>
+      <h3 className='contactSubTitle'>&gt;Grab my contact details:</h3>
+      <motion.div className='contactContainer' ref={constraintsRef}>
+        <div className='instruction'>
+          <p>✨ Feel free to drag and drop 👇 </p>
+        </div>
+        <motion.div
+          className='item mailBox'
+          drag
+          dragConstraints={constraintsRef}
+        >
+          <a href='mailto:christopherhannelas@gmail.com'>
+            <img className='contactIcon' src={mailLogo} alt='Mail icon'></img>
+          </a>
+          <u>christopherhannelas@gmail.com</u>
+        </motion.div>
+        <motion.div
+          className='item linkedinbox'
+          drag
+          dragConstraints={constraintsRef}
+        >
+          <a
+            href='https://www.linkedin.com/in/christopher-hannelas-a56747209/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <img className='contactIcon' src={linkedin} alt='Mail icon'></img>
+          </a>
+          <u> Linkedin</u>
+        </motion.div>
+        <motion.div
+          className='item facebookBox'
+          drag
+          dragConstraints={constraintsRef}
+        >
+          <a
+            href='https://www.facebook.com/christopherhannelas/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <img className='contactIcon' src={facebook} alt='Mail icon'></img>
+          </a>
+          <u>Facebook</u>
+        </motion.div>
+        <motion.div
+          className='item phoneBox'
+          drag
+          dragConstraints={constraintsRef}
+        >
+          <img className='contactIcon' src={whatsapp} alt='Mail icon'></img>☎
+          +230 57830438
+        </motion.div>
+      </motion.div>
 
       <div className=''>
-        <p>
-          Dapibus ultrices in iaculis nunc sed augue. Vitae auctor eu augue ut.
-          Tempor nec feugiat nisl pretium fusce id velit ut. Purus faucibus
-          ornare suspendisse sed nisi lacus sed viverra. Integer feugiat
-          scelerisque varius morbi enim. Tellus pellentesque eu tincidunt tortor
-          aliquam nulla facilisi cras. Amet facilisis magna etiam tempor orci eu
-          lobortis elementum nibh. Integer vitae justo eget magna fermentum
-          iaculis eu. Eu consequat ac felis donec. Egestas fringilla phasellus
-          faucibus scelerisque. Vestibulum lorem sed risus ultricies tristique
-          nulla. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus
-          urna neque. Pharetra convallis posuere morbi leo. Ullamcorper sit amet
-          risus nullam eget felis. Et magnis dis parturient montes nascetur
-          ridiculus mus. Aliquet porttitor lacus luctus accumsan tortor. Aliquam
-          sem et tortor consequat id porta nibh venenatis cras. Posuere lorem
-          ipsum dolor sit amet. Tempor nec feugiat nisl pretium. Venenatis cras
-          sed felis eget velit aliquet. Tortor at risus viverra adipiscing at in
-          tellus. Arcu dictum varius duis at consectetur lorem donec. Massa
-          tempor nec feugiat nisl pretium fusce id velit. Erat pellentesque
-          adipiscing commodo elit at imperdiet dui. Feugiat nibh sed pulvinar
-          proin gravida hendrerit. Massa vitae tortor condimentum lacinia quis
-          vel eros. Penatibus et magnis dis parturient montes nascetur ridiculus
-          mus. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare.
-        </p>
-      </div>
-      <div className=''>
-        <p>
-          Volutpat blandit aliquam etiam erat. Feugiat scelerisque varius morbi
-          enim nunc faucibus. Ultrices sagittis orci a scelerisque purus semper.
-          Platea dictumst quisque sagittis purus sit amet volutpat consequat
-          mauris. Sapien nec sagittis aliquam malesuada bibendum arcu vitae.
-          Cursus sit amet dictum sit amet justo donec enim diam. Nisl tincidunt
-          eget nullam non nisi est sit. Sapien eget mi proin sed libero enim sed
-          faucibus. At tellus at urna condimentum mattis. Dictum fusce ut
-          placerat orci nulla pellentesque dignissim enim. Nisl nunc mi ipsum
-          faucibus. Proin sagittis nisl rhoncus mattis rhoncus urna neque
-          viverra justo. Fermentum odio eu feugiat pretium nibh ipsum consequat
-          nisl vel. Sodales neque sodales ut etiam sit amet. Iaculis at erat
-          pellentesque adipiscing commodo elit at.
+        <h3 className='contactSubTitle'>
+          &gt;I'm currently available for freelance work...
+        </h3>
+
+        <p className='subtext'>
+          If you have a project that you want to get started, think you need my
+          help with something, then get in touch.
         </p>
       </div>
     </div>

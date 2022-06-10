@@ -49,9 +49,6 @@
       'about'
       'project';
   }
-  .hometitle {
-    width: 200px;
-  }
 }
 
 .miniText {
@@ -79,9 +76,13 @@
   border-radius: 5px;
   border-style: solid;
   border-color: cadetblue;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto 2rem auto;
 }
 .candosubTitle {
   color: white;
+}
+.textDiv {
+  display: grid;
+  margin: 0 auto;
+  width: clamp(18rem, 80%, 25rem);
 }

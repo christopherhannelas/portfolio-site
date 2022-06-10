@@ -118,3 +118,8 @@
   height: 3rem;
   margin: 0 1rem 1rem 1rem;
 }
+.descDiv {
+  display: flex;
+  width: clamp(9rem, 90%, 35rem);
+  margin-right: 1rem;
+}

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import linkedin from '../../assets/linkedin.png';
 import facebook from '../../assets/facebook.png';
 import mailLogo from '../../assets/envelope.png';
-import phoneLogo from '../../assets/telephone.png';
+
 import whatsapp from '../../assets/whatsapp.png';
 import './contact-content-styles.css';
 

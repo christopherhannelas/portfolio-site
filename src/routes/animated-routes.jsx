@@ -5,13 +5,12 @@ import Contact from '../pages/contact.page.jsx';
 import MyCode from '../pages/mycode.page.jsx';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from '../components/navbar/navbar.component.jsx';
-import ScrollToTop from '../components/scrollToTop/scrollToTop.component.js';
 
 function AnimatedRoutes() {
   return (
     <AnimatePresence>
       <Navbar />
-      <ScrollToTop />
+
       <Routes>
         <Route path='/' element={<Home />} />
 

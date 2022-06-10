@@ -3,7 +3,7 @@ import './code-content.style.css';
 
 function CodeContent() {
   return (
-    <div className=' blurred-box'>
+    <div className=' codeBox'>
       <div className=''>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

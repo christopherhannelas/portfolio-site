@@ -25,7 +25,7 @@ function Footer(props) {
       </p>
 
       <Link to='/contact'>
-        <button>Contact me</button>
+        <button className='contactBtn'>Contact me</button>
       </Link>
     </div>
   );

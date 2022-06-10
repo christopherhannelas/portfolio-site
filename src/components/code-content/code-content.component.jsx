@@ -1,28 +1,45 @@
 import React from 'react';
+import useFetch from '../fetch/fetch.component';
 import './code-content.style.css';
 
 function CodeContent() {
+  /*JOKE API -start-*/
+  // const {
+  //   data: joke,
+  //   jokeLoading,
+  //   jokeError,
+  //   jokeRefetch,
+  // } = useFetch('https://v2.jokeapi.dev/joke/Any');
+
+  // if (jokeLoading) return <h1> Wait for it...</h1>;
+
+  // if (jokeError) console.log(jokeError);
+  /*JOKE API -end-*/
+  /*KanyeWest API -start-*/
+  const {
+    data: quote,
+    quoteLoading,
+    quoteError,
+    quoteRefetch,
+  } = useFetch('https://api.kanye.rest');
+
+  if (quoteLoading) return <h1> Wait for it...</h1>;
+
+  if (quoteError) console.log(quoteError);
+  /*KanyeWest API -end-*/
   return (
     <div className=' codeBox'>
       <div className=''>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Pellentesque id nibh tortor id. Tellus pellentesque eu tincidunt
-          tortor aliquam nulla facilisi cras. Quam viverra orci sagittis eu
-          volutpat odio facilisis mauris sit. Aliquam etiam erat velit
-          scelerisque. Lorem ipsum dolor sit amet consectetur adipiscing elit
-          ut. Tempus urna et pharetra pharetra massa massa ultricies. Elementum
-          curabitur vitae nunc sed velit. Tellus in hac habitasse platea. Est
-          pellentesque elit ullamcorper dignissim. Varius quam quisque id diam
-          vel quam. In fermentum et sollicitudin ac orci phasellus egestas
-          tellus rutrum. Eget magna fermentum iaculis eu. Quis commodo odio
-          aenean sed. Nibh mauris cursus mattis molestie a iaculis. Gravida
-          neque convallis a cras semper auctor neque vitae tempus. Tincidunt
-          nunc pulvinar sapien et ligula. Ullamcorper eget nulla facilisi etiam
-          dignissim diam quis enim lobortis. Non quam lacus suspendisse faucibus
-          interdum posuere. Nunc scelerisque viverra mauris in aliquam sem.
-        </p>
+        {/* JOKE API -output- */}
+        {/* <h1>
+          {joke?.setup} : {joke?.delivery}
+        </h1>
+        <button onClick={jokeRefetch}> Refetch</button> */}
+        {/* JOKE API -output- */}
+        {/* Kanye API -output- */}
+        <h1>{quote?.quote}</h1>
+        <button onClick={quoteRefetch}> Refetch</button>
+        {/* Kany API -output- */}
       </div>
 
       <div className=''>

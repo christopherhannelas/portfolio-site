@@ -1,44 +1,39 @@
 import React from 'react';
-import useFetch from '../fetch/fetch.component';
+// import useFetch from '../fetch/fetch.component';
+import useFetchKanye from '../fetch/fetchKanye.component';
+import { Blockquote, Button } from '@mantine/core';
 import './code-content.style.css';
 
 function CodeContent() {
-  /*JOKE API -start-*/
-  // const {
-  //   data: joke,
-  //   jokeLoading,
-  //   jokeError,
-  //   jokeRefetch,
-  // } = useFetch('https://v2.jokeapi.dev/joke/Any');
-
-  // if (jokeLoading) return <h1> Wait for it...</h1>;
-
-  // if (jokeError) console.log(jokeError);
-  /*JOKE API -end-*/
   /*KanyeWest API -start-*/
-  const {
-    data: quote,
-    quoteLoading,
-    quoteError,
-    quoteRefetch,
-  } = useFetch('https://api.kanye.rest');
+  const { kanyeQuote, loadingKanye, errorKanye, refetchKanye } = useFetchKanye(
+    'https://api.kanye.rest'
+  );
 
-  if (quoteLoading) return <h1> Wait for it...</h1>;
+  if (loadingKanye) console.log('Calling Kanye');
 
-  if (quoteError) console.log(quoteError);
+  if (errorKanye) console.log('Kanye was busy');
   /*KanyeWest API -end-*/
   return (
     <div className=' codeBox'>
       <div className=''>
-        {/* JOKE API -output- */}
-        {/* <h1>
-          {joke?.setup} : {joke?.delivery}
-        </h1>
-        <button onClick={jokeRefetch}> Refetch</button> */}
-        {/* JOKE API -output- */}
         {/* Kanye API -output- */}
-        <h1>{quote?.quote}</h1>
-        <button onClick={quoteRefetch}> Refetch</button>
+        {kanyeQuote && (
+          <Blockquote cite='–Kanye West' icon=''>
+            💬"{kanyeQuote.quote}"
+          </Blockquote>
+        )}
+
+        <Button
+          variant='subtle'
+          radius='lg'
+          color='gray'
+          compact
+          onClick={refetchKanye}
+          leftIcon=''
+        >
+          Another one?
+        </Button>
         {/* Kany API -output- */}
       </div>
 

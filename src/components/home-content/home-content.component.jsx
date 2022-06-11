@@ -88,7 +88,7 @@ const HomeContent = (props) => {
           viewport={{ once: false, amount: 0.2 }}
           variants={titleAnimation}
         >
-          <h1 className='hometitle'>Projects.</h1>
+          <h1 className='hometitle'>Work in progress.</h1>
         </motion.div>
         <Project />
       </div>

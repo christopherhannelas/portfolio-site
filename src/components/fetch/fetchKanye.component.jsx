@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Blockquote, Button, Collapse } from '@mantine/core';
 
-function useFetchKanye(url) {
+function CallKanye() {
+  const url = 'https://api.kanye.rest';
   const [kanyeQuote, setKanyeQuote] = useState(null);
   const [loadingKanye, setLoadingKanye] = useState(false);
   const [errorKanye, setErrorKanye] = useState(null);
@@ -19,7 +21,7 @@ function useFetchKanye(url) {
       .finally(() => {
         setLoadingKanye(false);
       });
-  }, [url]);
+  }, []);
 
   const refetchKanye = () => {
     setLoadingKanye(true);
@@ -36,7 +38,15 @@ function useFetchKanye(url) {
       });
   };
 
-  return { kanyeQuote, loadingKanye, errorKanye, refetchKanye };
+  if (loadingKanye) console.log('Calling Kanye');
+
+  if (errorKanye) console.log('Kanye was busy');
+  return (
+    <div>
+      <span>💬"{kanyeQuote && kanyeQuote.quote}"</span>
+      <button onClick={refetchKanye}>refetchKanye</button>
+    </div>
+  );
 }
 
-export default useFetchKanye;
+export default CallKanye;

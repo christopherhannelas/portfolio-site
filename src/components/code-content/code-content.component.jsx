@@ -1,42 +1,72 @@
 import React from 'react';
-// import useFetch from '../fetch/fetch.component';
-import useFetchKanye from '../fetch/fetchKanye.component';
-import { Blockquote, Button } from '@mantine/core';
+import { motion } from 'framer-motion';
+import CallKanye from '../fetch/fetchKanye.component';
+import KhaledQuotes from '../quotes/khaledQuotes.component';
+
+import { Blockquote, Button, Collapse } from '@mantine/core';
+
 import './code-content.style.css';
 
-function CodeContent() {
-  /*KanyeWest API -start-*/
-  const { kanyeQuote, loadingKanye, errorKanye, refetchKanye } = useFetchKanye(
-    'https://api.kanye.rest'
-  );
-
-  if (loadingKanye) console.log('Calling Kanye');
-
-  if (errorKanye) console.log('Kanye was busy');
-  /*KanyeWest API -end-*/
+function CodeContent(props) {
+  const { codeTitleAnimation } = props;
   return (
     <div className=' codeBox'>
-      <div className=''>
-        {/* Kanye API -output- */}
-        {kanyeQuote && (
-          <Blockquote cite='–Kanye West' icon=''>
-            💬"{kanyeQuote.quote}"
-          </Blockquote>
-        )}
+      <div className=''></div>
+      <motion.div
+        initial={'hidden'}
+        whileInView={'visible'}
+        viewport={{ once: false, amount: 0.2 }}
+        variants={codeTitleAnimation}
+      >
+        <h1 className='codetitle'>MyCode.</h1>
+      </motion.div>
+      <h3 className='codesubTitle'>&gt;Get to know me through my code.</h3>
 
-        <Button
-          variant='subtle'
-          radius='lg'
-          color='gray'
-          compact
-          onClick={refetchKanye}
-          leftIcon=''
-        >
-          Another one?
-        </Button>
-        {/* Kany API -output- */}
+      <div>
+        <div class='screen'>
+          <p>
+            function CallKanye❪❫ ❴ <br></br> const ⟦kanyeQuote, setKanyeQuote⟧ =
+            useState❪null❫;<br></br>const ⟦loadingKanye, setLoadingKanye⟧ =
+            useState❪false❫; const ⟦errorKanye, setErrorKanye⟧ = useState❪null❫;
+            <br></br>
+            useEffect❪❪❫ => ❴<br></br>
+            setLoadingKanye❪true❫;<br></br>
+            axios<br></br>
+            .get❪url❫<br></br>
+            .then❪❪response❫ ⇒ ❴<br></br>
+            setKanyeQuote❪response.data❫;<br></br>
+            }❫<br></br>
+            .catch❪❪err❫ ⇒ ❴<br></br>
+            setErrorKanye❪err❫;<br></br>
+            ❵❫<br></br>
+            .finally❪❪❫ ⇒ ❴<br></br>
+            setLoadingKanye❪false❫;<br></br>
+            ❵❫;<br></br>
+            ❵, ⟦⟧❫;<br></br>
+            <br></br>
+            const refetchKanye = ❪❫ => ❴<br></br>
+            setLoadingKanye❪true❫;<br></br>
+            axios<br></br>
+            .get❪url❫<br></br>
+            .then❪❪response❫ ⇒ ❴<br></br>
+            setKanyeQuote❪response.data❫;<br></br>
+            ❵❫<br></br>
+            .catch❪❪err❫ ⇒ ❴<br></br>
+            setErrorKanye❪err❫;<br></br>
+            ❵❫<br></br>
+            .finally❪❪❫ ⇒ ❴<br></br>
+            setLoadingKanye❪false❫;<br></br>
+            ❵❫;<br></br>
+            ❵;<br></br>
+            <br></br>
+            if ❪loadingKanye❫ console.log❪'Calling Kanye'❫;<br></br>
+            if ❪errorKanye❫ console.log❪'Kanye was busy'❫;
+          </p>
+        </div>
       </div>
 
+      <CallKanye />
+      <KhaledQuotes />
       <div className=''>
         <p>
           Dapibus ultrices in iaculis nunc sed augue. Vitae auctor eu augue ut.

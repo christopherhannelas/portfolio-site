@@ -16,3 +16,52 @@
   padding: 1rem 1rem 2rem 1rem;
   margin: 2rem auto 2rem auto;
 }
+
+.codetitle {
+  display: inline;
+  width: 350px;
+}
+
+.codesubTitle {
+  color: white;
+}
+
+.screen {
+  animation: colorPulse 5s infinite ease-in-out;
+  background-image: radial-gradient(#444, #111);
+  box-shadow: 0 0 5vmin 1vmin #000 inset;
+
+  font-family: 'Fira Mono', monospace;
+  font-size: 10px;
+  height: auto;
+  overflow: hidden;
+  padding: 5vmin;
+  width: 350px;
+  margin: 1rem auto 1rem auto;
+  text-align: left;
+}
+
+p:last-child:after {
+  animation: blink 1s infinite;
+  content: '_';
+}
+
+@keyframes colorPulse {
+  0%,
+  100% {
+    color: #0c0;
+  }
+  48%,
+  52% {
+    color: #090;
+  }
+  50% {
+    color: #060;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

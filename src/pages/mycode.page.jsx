@@ -6,6 +6,21 @@ import { motion } from 'framer-motion';
 import CodeContent from '../components/code-content/code-content.component';
 
 function MyCode() {
+  const codeTitleAnimation = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        bounce: 0.8,
+
+        duration: 0.8,
+      },
+    },
+  };
+
   const [scroll, scrollTo] = useWindowScroll();
   return (
     <motion.div
@@ -14,7 +29,7 @@ function MyCode() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <CodeContent />
+      <CodeContent codeTitleAnimation={codeTitleAnimation} />
       <Affix position={{ bottom: 20, right: 20 }}>
         <Transition transition='slide-up' mounted={scroll.y > 0}>
           {(transitionStyles) => (
@@ -25,7 +40,7 @@ function MyCode() {
               size='xs'
               rightIcon='👆'
               style={transitionStyles}
-              onClick={() => scrollTo({ y: 950 })}
+              onClick={() => scrollTo({ y: 500 })}
             >
               Scroll to top
             </Button>

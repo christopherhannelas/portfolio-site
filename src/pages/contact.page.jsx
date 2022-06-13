@@ -41,7 +41,7 @@ function Contact() {
               size='xs'
               rightIcon='👆'
               style={transitionStyles}
-              onClick={() => scrollTo({ y: 950 })}
+              onClick={() => scrollTo({ y: 500 })}
             >
               Scroll to top
             </Button>

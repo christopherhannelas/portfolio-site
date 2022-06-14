@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Blockquote, Button, Collapse } from '@mantine/core';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import { Blockquote, Button } from '@mantine/core';
+
+import PermPhoneMsgOutlinedIcon from '@mui/icons-material/PermPhoneMsgOutlined';
+import './kanye.styles.css';
 
 function CallKanye() {
   const url = 'https://api.kanye.rest';
@@ -42,9 +47,23 @@ function CallKanye() {
 
   if (errorKanye) console.log('Kanye was busy');
   return (
-    <div>
-      <span>💬"{kanyeQuote && kanyeQuote.quote}"</span>
-      <button onClick={refetchKanye}>refetchKanye</button>
+    <div className='kanyeCall'>
+      <Box className='specsBox'>
+        <Paper elevation={6}>
+          <h3>Kanye West Quote Generator</h3>
+          <div className='specs'>
+            <span>API call to https://api.kanye.rest via Axios</span>
+          </div>
+        </Paper>
+      </Box>
+
+      <Blockquote className='quotebox' cite='– Kanye West' icon={null}>
+        💬"{kanyeQuote && kanyeQuote.quote}"
+      </Blockquote>
+      <Button variant='outline' color='dark' onClick={refetchKanye}>
+        <span>Call Ye again</span>
+        <PermPhoneMsgOutlinedIcon sx={{ fontSize: 15 }} />
+      </Button>
     </div>
   );
 }

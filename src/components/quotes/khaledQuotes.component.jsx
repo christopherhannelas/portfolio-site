@@ -1,8 +1,47 @@
 import React, { useEffect, useState } from 'react';
-
-import { Blockquote, Button, Collapse } from '@mantine/core';
+import './khaledQuotes.styles.css';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import {
+  Button,
+  Modal,
+  useMantineTheme,
+  Code,
+  Blockquote,
+} from '@mantine/core';
 
 function KhaledQuotes() {
+  const theme = useMantineTheme();
+  const [opened, setOpened] = useState(false);
+  const codeForKhaled = `
+   function KhaledQuotes() {
+  const quotes = [
+    'Always have faith. ALways have hope.',
+    ...,
+    'Another one.']
+    const [khaledQuote, setKhaledQuote] = useState(null);
+
+  useEffect(() => {
+    const randomNum = Math.floor(Math.random() * quotes.length);
+    setKhaledQuote(quotes[randomNum]);
+  }, []);
+
+  const AnotherOne = () => {
+    const anotherRandomNum = Math.floor(Math.random() * quotes.length);
+    setKhaledQuote(quotes[anotherRandomNum]);
+  };
+
+  return (
+    <div >
+     <Blockquote className='quotebox' cite='– Dj Khaled' icon={null}>
+        💬"{khaledQuote}"
+      </Blockquote>
+      <Button onClick={AnotherOne}>
+        Another one
+      </Button>
+    </div>
+  );
+}`;
   const quotes = [
     'Always have faith. ALways have hope.',
     'The key is to make it.',
@@ -134,9 +173,50 @@ function KhaledQuotes() {
   };
 
   return (
-    <div>
-      <span>💬"{khaledQuote}"</span>
-      <button onClick={AnotherOne}>Another One</button>
+    <div className='kanyeCall'>
+      <Box className='specsBox'>
+        <Paper elevation={6}>
+          <h3>DjKhaled Custom Quote Generator</h3>
+          <div className='specs'>
+            <span>
+              Custom-made quote generator that gives you the "major keys 🔑" to
+              success!
+            </span>
+          </div>
+        </Paper>
+      </Box>
+
+      <Blockquote className='quotebox' cite='– Dj Khaled' icon={null}>
+        💬"{khaledQuote}"
+      </Blockquote>
+      <Button variant='outline' color='dark' onClick={AnotherOne}>
+        Another one
+      </Button>
+      <br></br>
+      <Modal
+        size='auto'
+        opened={opened}
+        onClose={() => setOpened(false)}
+        withCloseButton={false}
+        overlayColor={theme.colors.dark[9]}
+        overlayOpacity={0.55}
+        overlayBlur={1}
+        overflow='outside'
+        padding='0'
+        transition='fade'
+        transitionDuration='800'
+      >
+        <div>
+          <Code className='screen' block>
+            <p>{codeForKhaled}</p>
+          </Code>
+        </div>
+      </Modal>
+      <div className='codebtn'>
+        <Button compact color='green' onClick={() => setOpened(true)}>
+          Want to break the code?
+        </Button>
+      </div>
     </div>
   );
 }

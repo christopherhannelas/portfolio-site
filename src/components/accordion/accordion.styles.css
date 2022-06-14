@@ -1,0 +1,15 @@
+.accordion-item.collapsed {
+  display: none;
+
+  transition: ease-in 1s;
+}
+
+.accordion-item.expanded {
+  display: block;
+  margin: 1rem auto 1rem auto;
+  transition: ease-in 1s;
+}
+
+.accordion-button {
+  margin: 5px;
+}

@@ -1,14 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Button, Modal, useMantineTheme, Code } from '@mantine/core';
 import CallKanye from '../fetch/fetchKanye.component';
 import KhaledQuotes from '../quotes/khaledQuotes.component';
-
-import { Blockquote, Button, Collapse } from '@mantine/core';
+import Davidgoggins from '../davidgoggins/davidgoggins.component';
+import { AccordionItem } from '../accordion/accordion.component';
+import { Accordion } from '../accordion/accordion.component';
 
 import './code-content.style.css';
 
 function CodeContent(props) {
   const { codeTitleAnimation } = props;
+  const theme = useMantineTheme();
+  const [opened, setOpened] = useState(false);
+
+  const codeForKanye = `function CallKanye() {
+  const url = 'https://api.kanye.rest';
+  const [kanyeQuote, setKanyeQuote] = useState(null);
+  const [loadingKanye, setLoadingKanye] = useState(false);
+  const [errorKanye, setErrorKanye] = useState(null);
+
+  useEffect(() => {
+    setLoadingKanye(true);
+    axios
+      .get(url)
+      .then((response) => {
+        setKanyeQuote(response.data);
+      })
+      .catch((err) => {
+        setErrorKanye(err);
+      })
+      .finally(() => {
+        setLoadingKanye(false);
+      });
+  }, []);
+
+  const refetchKanye = () => {
+    setLoadingKanye(true);
+    axios
+      .get(url)
+      .then((response) => {
+        setKanyeQuote(response.data);
+      })
+      .catch((err) => {
+        setErrorKanye(err);
+      })
+      .finally(() => {
+        setLoadingKanye(false);
+      });
+  };
+
+  if (loadingKanye) console.log('Calling Kanye');
+
+  if (errorKanye) console.log('Kanye was busy');
+  return (
+    <div className='kanyeCall'>      
+      <Blockquote cite='– Kanye West' icon={null}>
+        💬"{kanyeQuote && kanyeQuote.quote}"
+      </Blockquote>
+      <button>
+        Call Ye again
+      </button>
+    </div>
+  );
+}`;
+
   return (
     <div className=' codeBox'>
       <div className=''></div>
@@ -22,91 +78,54 @@ function CodeContent(props) {
       </motion.div>
       <h3 className='codesubTitle'>&gt;Get to know me through my code.</h3>
 
-      <div>
-        <div class='screen'>
-          <p>
-            function CallKanye❪❫ ❴ <br></br> const ⟦kanyeQuote, setKanyeQuote⟧ =
-            useState❪null❫;<br></br>const ⟦loadingKanye, setLoadingKanye⟧ =
-            useState❪false❫; const ⟦errorKanye, setErrorKanye⟧ = useState❪null❫;
-            <br></br>
-            useEffect❪❪❫ => ❴<br></br>
-            setLoadingKanye❪true❫;<br></br>
-            axios<br></br>
-            .get❪url❫<br></br>
-            .then❪❪response❫ ⇒ ❴<br></br>
-            setKanyeQuote❪response.data❫;<br></br>
-            }❫<br></br>
-            .catch❪❪err❫ ⇒ ❴<br></br>
-            setErrorKanye❪err❫;<br></br>
-            ❵❫<br></br>
-            .finally❪❪❫ ⇒ ❴<br></br>
-            setLoadingKanye❪false❫;<br></br>
-            ❵❫;<br></br>
-            ❵, ⟦⟧❫;<br></br>
-            <br></br>
-            const refetchKanye = ❪❫ => ❴<br></br>
-            setLoadingKanye❪true❫;<br></br>
-            axios<br></br>
-            .get❪url❫<br></br>
-            .then❪❪response❫ ⇒ ❴<br></br>
-            setKanyeQuote❪response.data❫;<br></br>
-            ❵❫<br></br>
-            .catch❪❪err❫ ⇒ ❴<br></br>
-            setErrorKanye❪err❫;<br></br>
-            ❵❫<br></br>
-            .finally❪❪❫ ⇒ ❴<br></br>
-            setLoadingKanye❪false❫;<br></br>
-            ❵❫;<br></br>
-            ❵;<br></br>
-            <br></br>
-            if ❪loadingKanye❫ console.log❪'Calling Kanye'❫;<br></br>
-            if ❪errorKanye❫ console.log❪'Kanye was busy'❫;
-          </p>
-        </div>
-      </div>
+      <u>Here are the greatest sources of inspiration and motivation :</u>
 
-      <CallKanye />
-      <KhaledQuotes />
-      <div className=''>
-        <p>
-          Dapibus ultrices in iaculis nunc sed augue. Vitae auctor eu augue ut.
-          Tempor nec feugiat nisl pretium fusce id velit ut. Purus faucibus
-          ornare suspendisse sed nisi lacus sed viverra. Integer feugiat
-          scelerisque varius morbi enim. Tellus pellentesque eu tincidunt tortor
-          aliquam nulla facilisi cras. Amet facilisis magna etiam tempor orci eu
-          lobortis elementum nibh. Integer vitae justo eget magna fermentum
-          iaculis eu. Eu consequat ac felis donec. Egestas fringilla phasellus
-          faucibus scelerisque. Vestibulum lorem sed risus ultricies tristique
-          nulla. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus
-          urna neque. Pharetra convallis posuere morbi leo. Ullamcorper sit amet
-          risus nullam eget felis. Et magnis dis parturient montes nascetur
-          ridiculus mus. Aliquet porttitor lacus luctus accumsan tortor. Aliquam
-          sem et tortor consequat id porta nibh venenatis cras. Posuere lorem
-          ipsum dolor sit amet. Tempor nec feugiat nisl pretium. Venenatis cras
-          sed felis eget velit aliquet. Tortor at risus viverra adipiscing at in
-          tellus. Arcu dictum varius duis at consectetur lorem donec. Massa
-          tempor nec feugiat nisl pretium fusce id velit. Erat pellentesque
-          adipiscing commodo elit at imperdiet dui. Feugiat nibh sed pulvinar
-          proin gravida hendrerit. Massa vitae tortor condimentum lacinia quis
-          vel eros. Penatibus et magnis dis parturient montes nascetur ridiculus
-          mus. Pulvinar mattis nunc sed blandit libero volutpat sed cras ornare.
-        </p>
+      <div className='accordionBox'>
+        <Accordion defaultIndex='1' onItemClick={console.log}>
+          <AccordionItem label='Kanye West' index='1'>
+            <CallKanye />
+
+            <Modal
+              size='auto'
+              opened={opened}
+              onClose={() => setOpened(false)}
+              withCloseButton={false}
+              overlayColor={theme.colors.dark[9]}
+              overlayOpacity={0.55}
+              overlayBlur={1}
+              overflow='outside'
+              padding='0'
+              transition='fade'
+              transitionDuration='800'
+            >
+              <div>
+                <Code className='screen' block>
+                  <p>{codeForKanye}</p>
+                </Code>
+              </div>
+            </Modal>
+            <Button compact color='green' onClick={() => setOpened(true)}>
+              Want to break the code?
+            </Button>
+          </AccordionItem>
+          <AccordionItem label='Dj Khaled' index='2'>
+            <KhaledQuotes />
+          </AccordionItem>
+          <AccordionItem label='David Goggins' index='3'>
+            <Davidgoggins />
+          </AccordionItem>
+        </Accordion>
       </div>
       <div className=''>
-        <p>
-          Volutpat blandit aliquam etiam erat. Feugiat scelerisque varius morbi
-          enim nunc faucibus. Ultrices sagittis orci a scelerisque purus semper.
-          Platea dictumst quisque sagittis purus sit amet volutpat consequat
-          mauris. Sapien nec sagittis aliquam malesuada bibendum arcu vitae.
-          Cursus sit amet dictum sit amet justo donec enim diam. Nisl tincidunt
-          eget nullam non nisi est sit. Sapien eget mi proin sed libero enim sed
-          faucibus. At tellus at urna condimentum mattis. Dictum fusce ut
-          placerat orci nulla pellentesque dignissim enim. Nisl nunc mi ipsum
-          faucibus. Proin sagittis nisl rhoncus mattis rhoncus urna neque
-          viverra justo. Fermentum odio eu feugiat pretium nibh ipsum consequat
-          nisl vel. Sodales neque sodales ut etiam sit amet. Iaculis at erat
-          pellentesque adipiscing commodo elit at.
-        </p>
+        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+        and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley
+        of type and scrambled it to make a type specimen book. It has survived
+        not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with
+        the release of Letraset sheets containing Lorem Ipsum passages, and more
+        recently with desktop publishing software like Aldus PageMaker including
+        versions of Lorem Ipsum.
       </div>
     </div>
   );

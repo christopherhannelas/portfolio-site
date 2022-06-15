@@ -2,7 +2,8 @@ import React from 'react';
 import { useWindowScroll } from '@mantine/hooks';
 import { Affix, Button, Transition } from '@mantine/core';
 import { motion } from 'framer-motion';
-
+import Navbar from '../components/navbar/navbar.component.jsx';
+import Footer from '../components/footer/footer.component';
 import CodeContent from '../components/code-content/code-content.component';
 
 function MyCode() {
@@ -29,7 +30,9 @@ function MyCode() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
+      <Navbar />
       <CodeContent codeTitleAnimation={codeTitleAnimation} />
+      <Footer titleAnimation={codeTitleAnimation} />
       <Affix position={{ bottom: 20, right: 20 }}>
         <Transition transition='slide-up' mounted={scroll.y > 0}>
           {(transitionStyles) => (
@@ -40,9 +43,9 @@ function MyCode() {
               size='xs'
               rightIcon='👆'
               style={transitionStyles}
-              onClick={() => scrollTo({ y: 500 })}
+              onClick={() => scrollTo({ y: 0 })}
             >
-              Scroll to top
+              All the way up
             </Button>
           )}
         </Transition>

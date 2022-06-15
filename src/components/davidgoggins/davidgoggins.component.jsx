@@ -56,7 +56,7 @@ export default function Davidgoggins() {
         >
           here
         </Button>{' '}
-        to see the page
+        to see the page.
       </h6>
       <Modal
         size='auto'
@@ -79,7 +79,7 @@ export default function Davidgoggins() {
       </Modal>
       <div className='codebtn'>
         <Button compact color='green' onClick={() => setOpened(true)}>
-          Want to break the code?
+          Want to see the code?
         </Button>
       </div>
     </div>

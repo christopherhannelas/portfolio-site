@@ -157,6 +157,7 @@ function KhaledQuotes() {
     'So important to keep the pathway of success clean',
     'Live smooth be smooth smell like success 🙏🏾.',
     'Trust me 🙏🏾.',
+    "They don't want us all the way up 👆",
     "I've made a lot of mistakes in my life and this is just. Another one.",
     'Major 🔑 alert! Dont ever burn no bridge!!',
   ];
@@ -214,7 +215,7 @@ function KhaledQuotes() {
       </Modal>
       <div className='codebtn'>
         <Button compact color='green' onClick={() => setOpened(true)}>
-          Want to break the code?
+          Here's the code
         </Button>
       </div>
     </div>

@@ -20,7 +20,7 @@ function Footer(props) {
       </h3>
 
       <p className='subtext'>
-        If you have a project that you want to get started, think you need my
+        If you have a project that you want to get started or think you need my
         help with something, then get in touch.
       </p>
 

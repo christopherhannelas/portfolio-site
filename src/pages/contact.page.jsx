@@ -2,7 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import ContactContent from '../components/contact-content/contact-content-component';
-
+import Navbar from '../components/navbar/navbar.component.jsx';
 import { useWindowScroll } from '@mantine/hooks';
 import { Affix, Button, Transition } from '@mantine/core';
 
@@ -30,6 +30,7 @@ function Contact() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
+      <Navbar />
       <ContactContent contactTitleAnimation={contactTitleAnimation} />
       <Affix position={{ bottom: 20, right: 20 }}>
         <Transition transition='slide-up' mounted={scroll.y > 0}>
@@ -41,9 +42,9 @@ function Contact() {
               size='xs'
               rightIcon='👆'
               style={transitionStyles}
-              onClick={() => scrollTo({ y: 500 })}
+              onClick={() => scrollTo({ y: 0 })}
             >
-              Scroll to top
+              all the way up
             </Button>
           )}
         </Transition>

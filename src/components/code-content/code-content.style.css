@@ -67,7 +67,7 @@
   z-index: 2;
 }
 
-p:last-child:after {
+.screen p:last-child:after {
   animation: blink 1s infinite;
   content: '_';
 }
@@ -110,7 +110,7 @@ p:last-child:after {
   }
 }
 .accordionBox {
-  background-color: rgba(138, 173, 170, 0.4);
+  background-color: rgb(221, 229, 240);
   margin: 1rem auto 1rem auto;
   width: 70vw;
   height: auto;
@@ -118,4 +118,184 @@ p:last-child:after {
   border: rgba(78, 78, 78, 0.6);
   border-radius: 10px;
   border-style: solid;
+}
+#cardbox {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70vw;
+  height: auto;
+  background: #fff;
+  padding: 1rem;
+  margin: 3rem auto;
+  border-radius: 15px;
+}
+.todoTitle {
+  order: 0;
+  flex: 1 100%;
+  font-size: 2rem;
+  padding: 0;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 15px;
+
+  background: #89dfb8;
+
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  color: #f7eb98;
+  text-shadow: -4px 4px 0 #89dfb8, -6px 6px 0 rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.todosubTitle {
+  padding: 0;
+}
+.projectTitle {
+  background-color: black;
+  order: 0;
+  flex: 1 100%;
+  font-size: 2rem;
+  color: #fff;
+}
+.todoPicture {
+  border-radius: 15px;
+  padding: 0;
+  flex: 50%;
+}
+.todoPicture img {
+  width: 100%;
+  border-radius: 15px;
+}
+.projectPicture {
+  background-color: red;
+  order: 1;
+  height: auto;
+  flex: 50%;
+}
+.projectdescription {
+  order: 2;
+  flex: 50%;
+  padding: 0;
+
+  text-align: left;
+}
+.projectdescription p {
+  padding: 0 1rem 1rem 1rem;
+  width: clamp(10rem, 90%, 40rem);
+  font-size: larger;
+  margin: 2rem auto 2rem auto;
+}
+.projectStack {
+  background-color: rgb(210, 206, 226, 0.2);
+  order: 4;
+  border-radius: 15px;
+  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  flex: 50%;
+  justify-content: flex-start;
+}
+.projectStack .stackTitle {
+  flex: 1 100%;
+  background-color: rgba(137, 223, 184, 0.4);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  order: 0;
+}
+.projectStack .stackTitle p {
+  padding: 1rem 0 10px 2rem;
+
+  font-size: small;
+  margin: 0;
+}
+.projectStack .stackdiv {
+  flex: 50%;
+
+  order: 1;
+}
+
+.projectStack .stackdiv p {
+  padding: 5px 0 1rem 2rem;
+  width: clamp(10rem, 90%, 40rem);
+  font-size: small;
+  margin: 0;
+}
+.projectLink {
+  background-color: rgba(247, 235, 152, 0.3);
+  order: 3;
+  flex: 50%;
+  border-radius: 15px;
+}
+.projectLink p {
+  padding: 1rem auto 0 auto;
+}
+.projectLink img {
+  margin: 0 0 1rem 0;
+}
+@media only screen and (max-width: 1024px) {
+  #carbox {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .todoTitle {
+    flex: 1 100%;
+  }
+  .projectTitle {
+    flex: 1 100%;
+  }
+  .projectPicture {
+    flex: 1 100%;
+  }
+  .todoPicture {
+    flex: 1 100%;
+  }
+  .projectdescription {
+    flex: 1 100%;
+  }
+  .projectStack {
+    flex: 1 100%;
+    order: 3;
+  }
+  .projectLink {
+    flex: 1 100%;
+    order: 4;
+  }
+}
+/*==================================================
+ * Shadow Effect 
+ * ===============================================*/
+.effect {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect:before,
+.effect:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+.effect:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
 }

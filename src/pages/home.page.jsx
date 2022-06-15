@@ -1,8 +1,8 @@
 import React from 'react';
-
+import LogoComponent from '../components/logo/logo.component.jsx';
 import HomeContent from '../components/home-content/home-content.component';
 import Footer from '../components/footer/footer.component';
-
+import Navbar from '../components/navbar/navbar.component.jsx';
 import { useWindowScroll } from '@mantine/hooks';
 import { Affix, Button, Transition } from '@mantine/core';
 import { motion } from 'framer-motion';
@@ -30,6 +30,8 @@ function Home() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
+      <LogoComponent />
+      <Navbar />
       <HomeContent titleAnimation={titleAnimation} />
       <Footer titleAnimation={titleAnimation} />
       <Affix position={{ bottom: 20, right: 20 }}>
@@ -42,9 +44,9 @@ function Home() {
               size='xs'
               rightIcon='👆'
               style={transitionStyles}
-              onClick={() => scrollTo({ y: 500 })}
+              onClick={() => scrollTo({ y: 0 })}
             >
-              Scroll to top
+              all the way up
             </Button>
           )}
         </Transition>

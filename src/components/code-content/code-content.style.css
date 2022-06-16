@@ -153,15 +153,21 @@
   padding: 0;
 }
 .projectTitle {
+  height: auto;
+  width: auto;
   background: linear-gradient(20deg, #0cbaba, #0dceda, #6ef3d6, #79dae8);
   order: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
   flex: 1 100%;
-  margin-bottom: 5px;
+  margin: auto auto 5px auto;
+
   border-radius: 15px;
+  padding: 0;
   color: white;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectTitle img {

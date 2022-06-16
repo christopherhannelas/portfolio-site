@@ -181,7 +181,7 @@ function CodeContent(props) {
             viewport={{ once: false, amount: 0.2 }}
             variants={codeTitleAnimation}
           >
-            <span>My Portfolio.</span>
+            <span className='todosubTitle'>My Portfolio.</span>
             <img src={logo} alt='logo'></img>
           </motion.div>
         </div>
@@ -211,12 +211,12 @@ function CodeContent(props) {
           </div>
           <div className='stackdiv'>
             <p>
-              ✧ ReactJs<br></br>✧ React-Router-Dom<br></br>✧ Axios
+              ✧ ReactJs<br></br>✧ Axios<br></br>✧ React-Router-Dom
             </p>
           </div>
           <div className='stackdiv'>
             <p>
-              ✧ Framer-Motion<br></br>✧ Mantine<br></br>✧ Material-UI
+              ✧ Framer-Motion<br></br>✧ Material-UI
             </p>
           </div>
         </div>

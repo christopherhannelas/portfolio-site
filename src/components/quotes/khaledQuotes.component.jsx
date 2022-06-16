@@ -166,7 +166,7 @@ function KhaledQuotes() {
   useEffect(() => {
     const randomNum = Math.floor(Math.random() * quotes.length);
     setKhaledQuote(quotes[randomNum]);
-  }, []);
+  }, ['']);
 
   const AnotherOne = () => {
     const anotherRandomNum = Math.floor(Math.random() * quotes.length);

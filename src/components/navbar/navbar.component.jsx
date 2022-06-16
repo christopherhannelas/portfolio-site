@@ -13,7 +13,7 @@ function Navbar() {
 
         <li>
           <Link to='/'>
-            <img className='navLogo' src={logowhite}></img>
+            <img className='navLogo' src={logowhite} alt='logoSmall'></img>
           </Link>
         </li>
 

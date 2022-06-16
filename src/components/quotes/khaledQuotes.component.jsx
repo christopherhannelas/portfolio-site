@@ -2,13 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './khaledQuotes.styles.css';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import {
-  Button,
-  Modal,
-  useMantineTheme,
-  Code,
-  Blockquote,
-} from '@mantine/core';
+import { Modal, useMantineTheme, Code, Blockquote } from '@mantine/core';
 
 function KhaledQuotes() {
   const theme = useMantineTheme();
@@ -311,9 +305,10 @@ function KhaledQuotes() {
       <Blockquote className='quotebox' cite='– Dj Khaled' icon={null}>
         💬"{khaledQuote}"
       </Blockquote>
-      <Button variant='outline' color='dark' onClick={AnotherOne}>
-        Another one
-      </Button>
+      <button className='fctBtn' onClick={AnotherOne}>
+        <span>Another one</span>
+      </button>
+
       <br></br>
       <Modal
         size='auto'
@@ -335,9 +330,9 @@ function KhaledQuotes() {
         </div>
       </Modal>
       <div className='codebtn'>
-        <Button compact color='green' onClick={() => setOpened(true)}>
+        <button className='codeBtn' onClick={() => setOpened(true)}>
           Here's the code
-        </Button>
+        </button>
       </div>
     </div>
   );

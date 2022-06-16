@@ -278,6 +278,26 @@
     order: 4;
   }
 }
+
+.codeBtn {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgb(0, 0, 0);
+  width: 10rem;
+  height: 3rem;
+  border: 0;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 17px;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.6s;
+  overflow: hidden;
+}
+
+.codeBtn:hover {
+  background: rgba(27, 163, 0, 0.5);
+  color: white;
+  cursor: pointer;
+}
 /*==================================================
  * Shadow Effect 
  * ===============================================*/

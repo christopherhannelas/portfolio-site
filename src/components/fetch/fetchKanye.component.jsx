@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { Blockquote, Button } from '@mantine/core';
+import { Blockquote } from '@mantine/core';
 
 import PermPhoneMsgOutlinedIcon from '@mui/icons-material/PermPhoneMsgOutlined';
 import './kanye.styles.css';
@@ -60,10 +60,10 @@ function CallKanye() {
       <Blockquote className='quotebox' cite='– Kanye West' icon={null}>
         💬"{kanyeQuote && kanyeQuote.quote}"
       </Blockquote>
-      <Button variant='outline' color='dark' onClick={refetchKanye}>
+      <button className='fctBtn' onClick={refetchKanye}>
         <span>Call Ye again</span>
         <PermPhoneMsgOutlinedIcon sx={{ fontSize: 15 }} />
-      </Button>
+      </button>
     </div>
   );
 }

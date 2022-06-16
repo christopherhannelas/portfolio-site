@@ -1,6 +1,6 @@
 import React from 'react';
 import './accordion.styles.css';
-import { Button } from '@mantine/core';
+import Button from '@mui/material/Button';
 
 export const AccordionItem = ({
   label,
@@ -12,8 +12,7 @@ export const AccordionItem = ({
     <div>
       <Button
         fullWidth
-        variant='gradient'
-        gradient={{ from: 'indigo', to: 'cyan' }}
+        variant='contained'
         className='accordion-button'
         onClick={handleClick}
       >

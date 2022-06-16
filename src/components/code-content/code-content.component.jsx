@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Button, Modal, useMantineTheme, Code } from '@mantine/core';
+import { Modal, useMantineTheme, Code } from '@mantine/core';
 import CallKanye from '../fetch/fetchKanye.component';
 import KhaledQuotes from '../quotes/khaledQuotes.component';
 import Davidgoggins from '../davidgoggins/davidgoggins.component';
@@ -107,9 +107,9 @@ function CodeContent(props) {
                 </Code>
               </div>
             </Modal>
-            <Button compact color='green' onClick={() => setOpened(true)}>
+            <button className='codeBtn' onClick={() => setOpened(true)}>
               Want to break the code?
-            </Button>
+            </button>
           </AccordionItem>
           <AccordionItem label='Dj Khaled' index='2'>
             <KhaledQuotes />

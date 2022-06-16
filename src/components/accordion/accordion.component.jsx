@@ -9,7 +9,7 @@ export const AccordionItem = ({
   children,
 }) => {
   return (
-    <>
+    <div>
       <Button
         fullWidth
         variant='gradient'
@@ -25,7 +25,7 @@ export const AccordionItem = ({
       >
         {children}
       </div>
-    </>
+    </div>
   );
 };
 

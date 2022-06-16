@@ -153,11 +153,20 @@
   padding: 0;
 }
 .projectTitle {
-  background-color: black;
+  background: linear-gradient(20deg, #0cbaba, #0dceda, #6ef3d6, #79dae8);
   order: 0;
+  font-size: 4rem;
+  font-weight: 600;
   flex: 1 100%;
-  font-size: 2rem;
-  color: #fff;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+}
+
+.projectTitle img {
+  height: 3rem;
+  margin: 1rem 1rem 0 1rem;
 }
 .todoPicture {
   border-radius: 15px;
@@ -169,10 +178,15 @@
   border-radius: 15px;
 }
 .projectPicture {
-  background-color: red;
   order: 1;
-  height: auto;
+  border-radius: 15px;
+  padding: 0;
   flex: 50%;
+}
+
+.projectPicture img {
+  width: 100%;
+  border-radius: 15px;
 }
 .projectdescription {
   order: 2;

@@ -8,6 +8,9 @@ import { AccordionItem } from '../accordion/accordion.component';
 import { Accordion } from '../accordion/accordion.component';
 import todolistpic from '../../assets/toDoList.png';
 import websiteLogo from '../../assets/websiteLogo.png';
+import gitHubLogo from '../../assets/github.png';
+import logo from '../../assets/logo.png';
+import portfolioPreview from '../../assets/PortfolioPreview.png';
 import './code-content.style.css';
 
 function CodeContent(props) {
@@ -143,17 +146,12 @@ function CodeContent(props) {
           </div>
           <div className='stackdiv'>
             <p>
-              ⤜NodeJs<br></br>
-              ⤜Express<br></br>
-              ⤜Body-parser <br></br>
-              ⤜Ejs
+              ✧ NodeJs<br></br>✧ Express<br></br>✧ Body-parser <br></br>✧ Ejs
             </p>
           </div>
           <div className='stackdiv'>
             <p>
-              ⤞Lodash<br></br>
-              ⤞Mongodb<br></br>
-              ⤞Mongoose <br></br>
+              ✧ Lodash<br></br>✧ Mongodb<br></br>✧ Mongoose <br></br>
             </p>
           </div>
         </div>
@@ -176,21 +174,69 @@ function CodeContent(props) {
         </div>
       </div>
       <div id='cardbox' className='effect'>
-        <div className='projectTitle'>title</div>
-        <div className='projectPicture'>Pic</div>
-        <div className='projectdescription'>
-          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived
-          not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum.
+        <div className='projectTitle'>
+          <motion.div
+            initial={'hidden'}
+            whileInView={'visible'}
+            viewport={{ once: false, amount: 0.2 }}
+            variants={codeTitleAnimation}
+          >
+            <span>My Portfolio.</span>
+            <img src={logo} alt='logo'></img>
+          </motion.div>
         </div>
-        <div className='projectStack'>stack</div>
-        <div className='projectLink'>Link</div>
+        <div className='projectPicture'>
+          <img src={portfolioPreview} alt='logo'></img>
+        </div>
+        <div className='projectdescription'>
+          <p>
+            ✅ My portfolio, is a fully responsive React application that uses
+            all the fundamental concept of this library.
+          </p>
+          <p>
+            🚀 The objective was to put all my learnings into practice while
+            taking care of the aesthetics.
+          </p>
+          <p>
+            📡 It's been deployed on Netlify via Github, which will allow me to
+            make frequent update and add new features easily.
+          </p>
+        </div>
+        <div className='projectStack'>
+          {' '}
+          <div className='stackTitle'>
+            <p>
+              <u>Stack used :</u>
+            </p>
+          </div>
+          <div className='stackdiv'>
+            <p>
+              ✧ ReactJs<br></br>✧ React-Router-Dom<br></br>✧ Axios
+            </p>
+          </div>
+          <div className='stackdiv'>
+            <p>
+              ✧ Framer-Motion<br></br>✧ Mantine<br></br>✧ Material-UI
+            </p>
+          </div>
+        </div>
+        <div className='projectLink'>
+          <p>
+            <u>Here is the link to the repository:</u>
+          </p>
+
+          <a
+            href='https://github.com/christopherhannelas/portfolio-site'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <img
+              className='linkLogo'
+              src={`${gitHubLogo}`}
+              alt='webSitelogo'
+            ></img>
+          </a>
+        </div>
       </div>
     </div>
   );

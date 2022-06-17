@@ -86,11 +86,11 @@
     position: relative;
   }
   .card0 {
-    background: url('../../assets/profile-pic.jpg') center center no-repeat;
+    background: url('../../assets/profile-pic.webp') center center no-repeat;
     background-size: 350px;
   }
   .card0:hover {
-    background: url('../../assets/profile-pic.jpg') left bottom no-repeat;
+    background: url('../../assets/profile-pic.webp') left bottom no-repeat;
     background-size: 450px;
   }
   .borderprofile {

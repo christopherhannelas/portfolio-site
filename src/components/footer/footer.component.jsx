@@ -28,7 +28,7 @@ function Footer(props) {
         <button className='contactBtn'>Contact me</button>
       </Link>
       <p className='copyright'>
-        Christopher Hannelas © {new Date().getFullYear()} v.0.95
+        Christopher Hannelas © {new Date().getFullYear()} v.1.0
       </p>
     </div>
   );

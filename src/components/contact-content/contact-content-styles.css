@@ -102,6 +102,10 @@
   font-size: medium;
 }
 
+.copyright {
+  font-size: x-small;
+}
+
 @media only screen and (max-width: 750px) {
   .contactContainer {
     width: auto;

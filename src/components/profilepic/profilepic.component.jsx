@@ -30,7 +30,7 @@ const Profilepic = () => {
     >
       <div className=' card card0'>
         <div className='borderprofile'>
-          <div className='profiletitle'> Christopher</div>
+          <div className='profiletitle'> Oh, Hello !</div>
           <div className='icons'>
             <a
               href='https://twitter.com/ChrisHannelas'

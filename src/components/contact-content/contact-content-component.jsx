@@ -82,6 +82,9 @@ function ContactContent(props) {
           If you have a project that you want to get started or think you need
           my help with something, then get in touch.
         </p>
+        <p className='copyright'>
+          Christopher Hannelas © {new Date().getFullYear()} v.1.0
+        </p>
       </div>
     </div>
   );

@@ -211,12 +211,12 @@ function CodeContent(props) {
           </div>
           <div className='stackdiv'>
             <p>
-              ✧ ReactJs<br></br>✧ Axios<br></br>✧ React-Router-Dom
+              ✧ ReactJs<br></br>✧ Framer-Motion<br></br>✧ React-Router-Dom
             </p>
           </div>
           <div className='stackdiv'>
             <p>
-              ✧ Framer-Motion<br></br>✧ Material-UI
+              ✧ Axios<br></br>✧ Material-UI
             </p>
           </div>
         </div>

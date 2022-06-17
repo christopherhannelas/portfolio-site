@@ -38,7 +38,7 @@ export const Accordion = ({ defaultIndex, onItemClick, children }) => {
   const items = children.filter((item) => item.type.name === 'AccordionItem');
 
   return (
-    <>
+    <div>
       {items.map(({ props }) => (
         <AccordionItem
           isCollapsed={bindIndex !== props.index}
@@ -47,6 +47,6 @@ export const Accordion = ({ defaultIndex, onItemClick, children }) => {
           children={props.children}
         />
       ))}
-    </>
+    </div>
   );
 };

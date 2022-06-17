@@ -4,8 +4,13 @@ import { Modal, useMantineTheme, Code } from '@mantine/core';
 import CallKanye from '../fetch/fetchKanye.component';
 import KhaledQuotes from '../quotes/khaledQuotes.component';
 import Davidgoggins from '../davidgoggins/davidgoggins.component';
-import { AccordionItem } from '../accordion/accordion.component';
-import { Accordion } from '../accordion/accordion.component';
+
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import todolistpic from '../../assets/toDoList.png';
 import websiteLogo from '../../assets/websiteLogo.png';
 import gitHubLogo from '../../assets/github.png';
@@ -84,40 +89,68 @@ function CodeContent(props) {
       <u>Quote generaters and embed social media feed:</u>
 
       <div id='' className='accordionBox effect'>
-        <Accordion defaultIndex='1' onItemClick={console.log}>
-          <AccordionItem label='Kanye West' index='1'>
-            <CallKanye />
-
-            <Modal
-              size='auto'
-              opened={opened}
-              onClose={() => setOpened(false)}
-              withCloseButton={false}
-              overlayColor={theme.colors.dark[9]}
-              overlayOpacity={0.55}
-              overlayBlur={1}
-              overflow='outside'
-              padding='0'
-              transition='fade'
-              transitionDuration='800'
+        <div>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls='panel1a-content'
+              id='panel1a-header'
             >
+              <Typography>Kanye West</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
               <div>
-                <Code className='screen' block>
-                  <p>{codeForKanye}</p>
-                </Code>
+                <CallKanye />
+                <Modal
+                  size='auto'
+                  opened={opened}
+                  onClose={() => setOpened(false)}
+                  withCloseButton={false}
+                  overlayColor={theme.colors.dark[9]}
+                  overlayOpacity={0.55}
+                  overlayBlur={1}
+                  overflow='outside'
+                  padding='0'
+                  transition='fade'
+                  transitionDuration='800'
+                >
+                  <div>
+                    <Code className='screen' block>
+                      <p>{codeForKanye}</p>
+                    </Code>
+                  </div>
+                </Modal>
+                <button className='codeBtn' onClick={() => setOpened(true)}>
+                  Want to break the code?
+                </button>
               </div>
-            </Modal>
-            <button className='codeBtn' onClick={() => setOpened(true)}>
-              Want to break the code?
-            </button>
-          </AccordionItem>
-          <AccordionItem label='Dj Khaled' index='2'>
-            <KhaledQuotes />
-          </AccordionItem>
-          <AccordionItem label='David Goggins' index='3'>
-            <Davidgoggins />
-          </AccordionItem>
-        </Accordion>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls='panel2a-content'
+              id='panel2a-header'
+            >
+              <Typography>Dj Khaled</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <KhaledQuotes />
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls='panel3a-content'
+              id='panel3a-header'
+            >
+              <Typography>David Goggins</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Davidgoggins />
+            </AccordionDetails>
+          </Accordion>
+        </div>
       </div>
 
       <div id='cardbox' className='effect'>

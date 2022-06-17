@@ -25,6 +25,9 @@
   display: inline;
   width: 350px;
 }
+.copyright {
+  font-size: x-small;
+}
 
 .contactBtn {
   background: rgba(255, 255, 255, 0.3);

@@ -21,7 +21,7 @@ const App = () => {
       <Router>
         <ScrollToTop />
         {isLoading ? (
-          <div className='test'>
+          <div className='loading'>
             <Oval
               color='#2d8e67'
               secondaryColor='white'

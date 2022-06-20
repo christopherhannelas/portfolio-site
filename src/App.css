@@ -31,7 +31,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #ffffff;
 }
-.test {
+.loading {
   width: 100px;
   margin: auto;
 }

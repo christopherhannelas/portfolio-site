@@ -86,3 +86,22 @@
   margin: 0 auto;
   width: clamp(18rem, 80%, 25rem);
 }
+
+.profilePicContainer a {
+  text-decoration: none;
+}
+
+.profilePicContainer a h3:hover {
+  color: #f4a30b;
+  content: '🖺';
+  font-size: 1.5rem;
+  transition: ease-in-out 1s;
+}
+.profilePicContainer a h3:hover::after {
+  content: ' 🖺';
+}
+.profilePicContainer a h3 {
+  margin-top: 1rem;
+  color: white;
+  transition: ease-out 3s;
+}

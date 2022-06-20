@@ -1,6 +1,7 @@
 import React from 'react';
 import './home-content.styles.css';
 import { motion } from 'framer-motion';
+import resume from '../../assets/Christopher Hannelas Web dev CV.pdf';
 import Profilepic from '../profilepic/profilepic.component';
 import Project from '../project/project.component';
 import logoReact from '../../assets/logoreact.png';
@@ -24,6 +25,10 @@ const HomeContent = (props) => {
         <p> a web developer </p>
 
         <Profilepic />
+
+        <a href={resume} target='_blank' rel='noreferrer'>
+          <h3 className='candosubTitle'>&gt;Click here to view my resume.</h3>
+        </a>
       </div>
       <div className='aboutMeContainer'>
         <motion.div
